@@ -14,7 +14,7 @@ public class NewBehaviourScript : MonoBehaviour
     private Vector2 velocity;
     private Rigidbody2D body;
     private Ground ground;
-
+    public Animator animator;
     private float maxSpeedChange;
     private float acceleration;
     private bool onGround;
