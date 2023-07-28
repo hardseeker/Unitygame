@@ -21,6 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
     private bool onGround;
     public float speed;
     private bool facingright = true;
+    
 
     void Awake()
     {
@@ -32,6 +33,14 @@ public class NewBehaviourScript : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         speed = velocity.magnitude;
+        if(onGround == true)
+        {
+        animator.SetBool("inair", false);
+        }
+        if(onGround == false)
+        {
+        animator.SetBool("inair", true);
+        }
         animator.SetFloat("horzi movement", Mathf.Abs(speed));
         direction.x = input.RetrieveMoveInput();
         desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
