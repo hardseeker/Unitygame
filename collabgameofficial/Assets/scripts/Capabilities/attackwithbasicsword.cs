@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class attackwithbasicsword : MonoBehaviour
 {
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class attackwithbasicsword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    
     }
 }
